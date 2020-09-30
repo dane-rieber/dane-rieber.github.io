@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="mypage_bootstrap.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <a class="navbar-brand mr-auto" href="https://github.com/danerieber">
+                <img src="mark-github.svg" alt="GitHub" style="width: 30px;">
+            </a>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <br>
+        <h1>Add New Interest</h1>
+        <br>
+
+        <form action="mypage_bootstrap.html">
+            <div class="form-group">
+                <label for="name">Interest Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="description">Text About Interest</label>
+                <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="image">Upload Local Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="tweets">Select # Tweets to Display</label>
+                        <select class="form-control" id="tweets" name="tweets">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <legend class="col-form-label">On a scale from 1-5, how interested in this are you?</legend>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="interest1" value="1">
+                    <label class="form-check-label" for="interest1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="interest2" value="2">
+                    <label class="form-check-label" for="interest1">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="interest3" value="3">
+                    <label class="form-check-label" for="interest3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="interest4" value="4">
+                    <label class="form-check-label" for="interest4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="interest5" value="5">
+                    <label class="form-check-label" for="interest5">5</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <legend class="col-form-label">Login to Finish Submitting</legend>
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
