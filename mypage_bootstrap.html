@@ -6,19 +6,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="mypage_bootstrap.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="form.html">Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup-modal/login.html">Sign Up Modal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tic-tac-toe/tic-tac-toe.html">Tic Tac Toe Game</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -60,31 +73,34 @@
             <div class="card">
                 <img class="card-img-top p-2" height="220px" src="https://i.ytimg.com/vi/GOD-RyVB-3Q/maxresdefault.jpg"
                     alt="Picture of longboarding">
-                <div class="card-body">
+                <div class="card-body" id="interest1">
                     <h5 class="card-title">Longboarding</h5>
                     <p class="card-text">Ever since I picked up longboarding I have loved it. My favorite type of
                         longboarding is carving, where you take large turns down a hill to stay at a comfortable speed.
                     </p>
+                    <button type="button" class="btn btn-info add-tweet-button ml-auto mr-2 mb-2" onclick="appendTweet('#interest1')">+</button>
                 </div>
             </div>
             <div class="card">
                 <img class="card-img-top p-2" height="220px"
                     src="https://gamespot1.cbsistatic.com/uploads/original/1179/11799911/3334232-rl.jpg"
                     alt="Picture of Rocket League">
-                <div class="card-body">
+                <div class="card-body" id="interest2">
                     <h5 class="card-title">Rocket League</h5>
                     <p class="card-text">I have been playing Rocket League throughout college and have spent over 1200
                         hours in-game so far. It's basically just soccer with cars.</p>
+                        <button type="button" class="btn btn-info add-tweet-button ml-auto mr-2 mb-2" onclick="appendTweet('#interest2')">+</button>
                 </div>
             </div>
             <div class="card">
                 <img class="card-img-top p-2" height="220px"
                     src="http://panthernow.com/wp-content/uploads/390534244_3db9138593_b.jpg"
                     alt="Picture of music sheet">
-                <div class="card-body">
+                <div class="card-body" id="interest3">
                     <h5 class="card-title">Music</h5>
                     <p class="card-text">I love some good classical masterpieces, and I play some piano myself. I was
                         really into music production with FL Studio in high school.</p>
+                    <button type="button" class="btn btn-info add-tweet-button ml-auto mr-2 mb-2" onclick="appendTweet('#interest3')">+</button>
                 </div>
             </div>
         </div>
