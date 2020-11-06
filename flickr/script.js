@@ -1,8 +1,8 @@
 var lastUpdate;
 
 window.onscroll = function(ev) {
-    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-        if (Date.now() - lastUpdate < 1000) return;
+    if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
+        if ((Date.now() - lastUpdate) < 500) return;
         lastUpdate = Date.now();
         makeApiCall(false);
     }
