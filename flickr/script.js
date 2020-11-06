@@ -19,9 +19,11 @@ function makeApiCall(refresh) {
     }
 
     const numPictures = $('#numPictures').find(':selected').text();
-    const searchTerm = $('#searchTerm').val();
+    const searchTerms = $('#searchTerm').val().replaceAll(' ', ',');
 
-    const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d5e6164057da1dfec8bf6c11c6527842&text=${searchTerm}&per_page=${numPictures}&page=${page}&format=json&nojsoncallback=1`;
+    const url = getUrl(searchTerms, numPictures, page);
+
+    console.log(url);
 
     $.ajax(url, {
         dataType: 'json', success: function(data, status, xhr) {
@@ -32,6 +34,10 @@ function makeApiCall(refresh) {
             $('#results').append(results);
         }
     });
+}
+
+function getUrl(tags, numPictures, page) {
+    return `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d5e6164057da1dfec8bf6c11c6527842&tags=${tags}&per_page=${numPictures}&page=${page}&privacy_filter=1&safe_search=1&format=json&nojsoncallback=1`
 }
 
 function getCard(photo) {
